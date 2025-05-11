@@ -1,0 +1,102 @@
+<!--
+ * @Author: wangyecheng 1874863790@qq.com
+ * @Date: 2025-04-10 12:06:30
+ * @LastEditors: wangyecheng 1874863790@qq.com
+ * @LastEditTime: 2025-04-16 01:23:32
+ * @FilePath: \docs\docsify-app\docs\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!-- filepath: docsify-app/docs/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docsify 应用</title>
+  <!-- Docsify 核心 CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <!-- 引入暗模式样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- Docsify 核心 JS -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- Docsify 搜索插件 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script> -->
+  <script>
+    window.$docsify = {
+      name: 'Docsify 应用',
+      repo: '', // 可填入你的 GitHub 仓库地址
+      loadSidebar: true, // 加载侧边栏
+      subMaxLevel: 2, // 控制顯示的子目錄層級
+      coverpage: true, // 如果有封面页，启用此选项
+      scrollToTop: true, // 启用回到顶部按钮
+      auto2top: true,
+      // 字数同级插件
+      count: {
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        }
+      },
+      isExpected: true,
+      search: [
+        // '/Docsify/搭建Docsify',
+        // '/Electron/配置electron项目',
+      ],
+      search: {
+        maxAge: 86400000, // 本地缓存时间，单位毫秒
+        paths: 'auto', // 自动索引所有页面
+        placeholder: '搜索文档...',
+        noData: '找不到结果',
+        depth: 2 // 搜索标题的深度
+      },
+      // search:default
+      // 切换模式按钮颜色
+      // themeColor: "#42b983",
+      // 暗模式
+      themeColor: "#42b983",
+      darkMode: {
+        dark: {
+          background: "#1c2022",
+          toggleBtnBg: "#34495e",
+          textColor: "#b4b4b4"
+        },
+        light: {
+          background: "white",
+          toggleBtnBg: "var(--theme-color)",
+          textColor: "var(--theme-color)"
+        }
+      }
+    };
+  </script>
+  <!-- 字数插件 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 暗模式 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+  <!-- 吸顶插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+</body>
+<style>
+  /* 自定義暗模式切換按鈕的位置 */
+  #dark_mode {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+  }
+</style>
+
+</html>
