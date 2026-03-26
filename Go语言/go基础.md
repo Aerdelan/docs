@@ -41,7 +41,7 @@ go 测试项目结构：
 my-gin-app-1/
 ├── controller/
 │ └── hello.go # 定义路由处理函数，例如 HelloHandler 和 GetUsers
-├── model/
+├── model/ #用来存储定义的返回结构体[1]
 │ └── db.go # 数据库初始化和连接管理
 ├── router/
 │ └── router.go # 路由配置（未提供，但通常用于定义路由）
@@ -49,6 +49,20 @@ my-gin-app-1/
 ├── go.mod # Go 模块定义文件，包含模块名和依赖
 ├── go.sum # Go 模块依赖的校验文件
 └── Makefile # 定义常用命令（如 run、build、clean）
+
+模型层常用结构定义:
+
+```go
+type Example struct {
+    ID        int        `json:"id"`
+    Name      string     `json:"name"`
+    Price     float64    `json:"price"`
+    Active    bool       `json:"active"`
+    CreatedAt time.Time  `json:"created_at"`
+    Tags      []string   `json:"tags"`
+    Children  []Area     `json:"children"`
+}
+```
 
 项目安装 mysql 驱动：go get -u github.com/go-sql-driver/mysql
 
